@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Portafolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; }
+  
+  /* TODO: personaliza estos colores */
+  header { 
+    background: #9053a1; 
+    color: white; 
+    padding: 60px 20px; 
+    text-align: center;
+    /* Usamos flexbox para alinear la foto y el texto de forma limpia */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+  }
+  
+  /* Estilo profesional para tu foto de perfil */
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* La hace completamente circular */
+    object-fit: cover; /* Evita que la foto se distorsione */
+    border: 4px solid rgba(255, 255, 255, 0.4); /* Lindo borde sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+
+  header h1 { font-size: 2.5rem; margin-bottom: 5px; }
+  header p { font-size: 1.2rem; opacity: 0.8; }
+  
+  nav { background: #9053a1; padding: 15px; text-align: center; border-radius: 30px; margin-bottom: 20px; margin-top: 20px; }
+  nav a { color: rgb(249, 248, 249); margin: 0 15px; text-decoration: none; }
+  nav { margin-bottom: 20px; }
+  section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
+  section h2 { margin-bottom: 20px; color: #f9f9f9; }
+  section[id="sobre-mi"] { background: #9053a1; border-radius: 30px; margin-top: 20px; margin-bottom: 20px; }
+  section[id="proyectos"] { background: #9053a1; margin-top: 20px; margin-bottom: 20px; border-radius: 30px; }
+  section[id="contacto"] { background: #9053a1; margin-top: 20px; margin-bottom: 20px; border-radius: 30px; }
+  .proyecto { background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
+  
+  footer { background: #9053a1; margin-top: 20px; margin-bottom: 20px; border-radius: 30px; text-align: center; padding: 15px; color: white; }
+</style>
+</head>
+<body>
+
+  <header>
+    <!-- Remplaza "tu-foto.jpg" por la ruta o enlace real de tu fotografía -->
+    <img src="FondoPortafolio.jpeg" alt="Foto de Evelin Johana" class="foto-perfil">
+    <div>
+      <h1>Evelin Johana Pèrez Correa</h1>
+      <p> Desarrolladora Full Stack en formación</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Me llamo Evelin Johana Pèrez Correa, tengo 17 años, soy una desarrlladora Full Stack en formación. Me apasiona crear soluciones web innovadoras y estoy siempre buscando aprender nuevas tecnologías. Actualmente estoy studying una tecnologia de ADSO en el Sena y la meta es hacer una carrera de ingeneria en sistemas en una buena universidad</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+    
+    <div class="proyecto">
+      <h3>FIND YOUR PETS</h3>
+      <p>Es una aplicación web la cual permite a los usuarios encontrar y publicar mascotas perdidas o encontradas.</p>
+    </div>
+
+    <div class="proyecto">
+      <h3>Game Tracker</h3>
+      <p>Es una aplicación web para seguir y gestionar tu colección de videojuegos favoritos.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>ep5781665@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>Evelin Johana Pèrez Correa - 2026</p>
+  </footer>
+
+  <script>
+    // Cambiar el color de fondo del menú de navegación al hacer scroll
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        
+        if (window.scrollY > 50) {
+            nav.style.backgroundColor = '#9053a1'; 
+            nav.style.transition = 'background-color 0.3s ease'; 
+        } else {
+            nav.style.backgroundColor = '#d00ae6'; 
+        }
+    });
+  </script>
+
+</body>
+</html>
